@@ -9,7 +9,7 @@ VidyoConnector-xamarin is a Xamarin Forms cross platform application which conta
 2. VidyoConnector.iOS     : iOS application which leverages the VidyoConnector PCL in building it's UI.
 3. VidyoConnector.Android : Android application which leverages the VidyoConnector PCL in building it's UI.
 
-## Acquire VidyoClient library
+## Acquire VidyoClient iOS and Android SDKs
 1. Download the latest Vidyo.io iOS SDK package: https://static.vidyo.io/latest/package/VidyoClient-iOSSDK.zip
 2. Move the unzipped VidyoClient-iOSSDK folder to the VidyoConnector-xamarin directory.
 3. Download the latest Vidyo.io Android SDK package: https://static.vidyo.io/latest/package/VidyoClient-AndroidSDK.zip
