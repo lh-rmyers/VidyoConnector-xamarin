@@ -5,23 +5,23 @@
              xmlns:controls="clr-namespace:VidyoConnector.Controls;assembly=VidyoConnector"
              x:Class="VidyoConnector.MainPage">
     <Grid>
-      <Grid.RowDefinitions>
-        <RowDefinition Height="*" />
-        <RowDefinition Height="350" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="50" />
-        <RowDefinition Height="20" />
-      </Grid.RowDefinitions>
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="*" />
-        <ColumnDefinition Width="65" />
-        <ColumnDefinition Width="65" />
-        <ColumnDefinition Width="65" />
-        <ColumnDefinition Width="65" />
-        <ColumnDefinition Width="*" />
-      </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="305" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="65" />
+            <ColumnDefinition Width="65" />
+            <ColumnDefinition Width="65" />
+            <ColumnDefinition Width="65" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-      <controls:NativeView x:Name="_videoView" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="6" BackgroundColor="Aqua"/>
+        <controls:NativeView x:Name="_videoView" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="6" BackgroundColor="Aqua"/>
 
         <Frame x:Name="_form" Padding="0,0,0,0" Grid.Row="1"
             Grid.Column="1"
@@ -31,28 +31,29 @@
 
             <StackLayout>
                 <Image Source="vidyo_io.png" HeightRequest="100" WidthRequest="100"/>
+                <Entry HeightRequest="1" BackgroundColor="#A9AAAB"/>
                 <StackLayout Orientation="Horizontal">
                         <Label Text="Host" FontSize="10" WidthRequest="80" HeightRequest="30" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
-                        <Entry Placeholder="prod.vidyo.io" Text="{Binding Host, Mode=TwoWay}" FontSize="12" WidthRequest="180" HeightRequest="30" BackgroundColor="#F0F3F4"/>
+                        <Entry Placeholder="prod.vidyo.io" Text="{Binding Host, Mode=TwoWay}" FontSize="10" WidthRequest="180" HeightRequest="30" BackgroundColor="#F0F3F4"/>
                 </StackLayout>
-                <ProgressBar/>
+                <Entry HeightRequest="1" BackgroundColor="#A9AAAB"/>
                 <StackLayout Orientation="Horizontal">
                         <Label Text="Token" FontSize="10" WidthRequest="80" HeightRequest="30" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
-                        <Entry Placeholder="required" Text="{Binding Token, Mode=TwoWay}" FontSize="12" WidthRequest="180" HeightRequest="30" BackgroundColor="#F0F3F4"/>
+                        <Entry Placeholder="required" Text="{Binding Token, Mode=TwoWay}" FontSize="10" WidthRequest="180" HeightRequest="30" BackgroundColor="#F0F3F4"/>
                 </StackLayout>
-                <ProgressBar/>
+                <Entry HeightRequest="1" BackgroundColor="#A9AAAB"/>
                 <StackLayout Orientation="Horizontal">
                         <Label Text="Display Name" FontSize="10" WidthRequest="80" HeightRequest="30" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
-                        <Entry Placeholder="your name" Text="{Binding DisplayName, Mode=TwoWay}" FontSize="12" WidthRequest="180" HeightRequest="30" BackgroundColor="#F0F3F4"/>
+                        <Entry Placeholder="your name" Text="{Binding DisplayName, Mode=TwoWay}" FontSize="10" WidthRequest="180" HeightRequest="30" BackgroundColor="#F0F3F4"/>
                 </StackLayout>
-                <ProgressBar/>
+                <Entry HeightRequest="1" BackgroundColor="#A9AAAB"/>
                 <StackLayout Orientation="Horizontal">
                         <Label Text="Resource ID" FontSize="10" WidthRequest="80" HeightRequest="30" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
-                        <Entry Placeholder="required" Text="{Binding ResourceId, Mode=TwoWay}" FontSize="12" WidthRequest="180" HeightRequest="30" BackgroundColor="#F0F3F4"/>
+                        <Entry Placeholder="required" Text="{Binding ResourceId, Mode=TwoWay}" FontSize="10" WidthRequest="180" HeightRequest="30"  BackgroundColor="#F0F3F4"/>
                 </StackLayout>
-                <ProgressBar/>
+                <Entry HeightRequest="1" BackgroundColor="#A9AAAB"/>
 
-                <ActivityIndicator x:Name="_connectionSpinner" IsRunning="false"/>
+                <ActivityIndicator x:Name="_connectionSpinner" IsRunning="false" HeightRequest="15"/>
             </StackLayout>
         </Frame>
 
@@ -77,24 +78,7 @@
                 <TapGestureRecognizer Tapped="OnMicrophonePrivacyButtonClicked"/>
             </Image.GestureRecognizers>
         </Image>
-        <!--
-        <Button
-            Image="camera_switch.png"
-            Grid.Row="3"
-            Grid.Column="2"
-            Clicked="OnCycleCameraButtonClicked"/>
-      <Button
-            Image="{Binding CameraPrivacyImage}"
-            Grid.Row="3"
-            Grid.Column="3"
-            Clicked="OnCameraPrivacyButtonClicked"/>
-      <Button
-            Image="{Binding MicrophonePrivacyImage}"
-            Grid.Row="3"
-            Grid.Column="4"
-            Clicked="OnMicrophonePrivacyButtonClicked"/>
-        -->
-      <Label
+        <Label
             Text="{Binding ToolbarStatus}"
             TextColor="White"
             FontSize="15"
@@ -103,7 +87,7 @@
             Grid.ColumnSpan="2"
             VerticalOptions="Center"
             HorizontalOptions="Center" />
-      <Label
+        <Label
             Text="{Binding ClientVersion}"
             TextColor="White"
             FontSize="10"

@@ -1,6 +1,6 @@
-﻿using Android.Widget;
+﻿using Android.App;
 using Android.Util;
-using Android.App;
+using Android.Widget;
 
 [assembly: Xamarin.Forms.ExportRenderer(typeof(VidyoConnector.Controls.NativeView), typeof(VidyoConnector.Android.NativeViewRenderer))]
 
@@ -30,6 +30,9 @@ namespace VidyoConnector.Android
 
             if (e.NewElement != null) {
                 // Configure the control and subscribe to event handlers
+
+// For some reason, when DisplayMetrics is referenced, the UI preview in MainPage.xaml.cs is not shown.
+// Set #if to false if you want to see a valid preview of the UI.
 #if true
                 DisplayMetrics displayMetrics = Application.Context.Resources.DisplayMetrics;
                 e.NewElement.Density = displayMetrics.Density;
