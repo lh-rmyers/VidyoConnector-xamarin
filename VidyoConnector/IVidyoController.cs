@@ -23,5 +23,5 @@ namespace VidyoConnector
 
         // Orientation has changed
         void OnOrientationChange();
-	}
+    }
 }

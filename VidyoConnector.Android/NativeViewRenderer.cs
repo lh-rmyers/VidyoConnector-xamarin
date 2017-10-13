@@ -30,12 +30,12 @@ namespace VidyoConnector.Android
 
             if (e.NewElement != null) {
                 // Configure the control and subscribe to event handlers
-#if false
+#if true
                 DisplayMetrics displayMetrics = Application.Context.Resources.DisplayMetrics;
                 e.NewElement.Density = displayMetrics.Density;
 #endif
                 e.NewElement.Handle  = this.Control.Handle;
-			}
+            }
         }
-	}
+    }
 }

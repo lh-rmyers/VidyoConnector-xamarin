@@ -12,9 +12,9 @@ namespace VidyoConnector.iOS
 
         public NativeViewRenderer() {}
 
-		protected override async void OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs<VidyoConnector.Controls.NativeView> e) 
+        protected override async void OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs<VidyoConnector.Controls.NativeView> e) 
         {
-			base.OnElementChanged(e);
+            base.OnElementChanged(e);
 
             if (Control == null) {
                 // Instantiate the native control and assign it to the Control property with
@@ -33,19 +33,19 @@ namespace VidyoConnector.iOS
                 e.NewElement.Handle = this.Control.Handle;
                 await this.AuthorizeMediaUse();
             }
-		}
+        }
 
-		async System.Threading.Tasks.Task AuthorizeMediaUse() {
-			var authorizationStatus = AVCaptureDevice.GetAuthorizationStatus(AVMediaType.Video);
+        async System.Threading.Tasks.Task AuthorizeMediaUse() {
+            var authorizationStatus = AVCaptureDevice.GetAuthorizationStatus(AVMediaType.Video);
 
-			if (authorizationStatus != AVAuthorizationStatus.Authorized) {
-				await AVCaptureDevice.RequestAccessForMediaTypeAsync(AVMediaType.Video);
-			}
+            if (authorizationStatus != AVAuthorizationStatus.Authorized) {
+                await AVCaptureDevice.RequestAccessForMediaTypeAsync(AVMediaType.Video);
+            }
 
-			authorizationStatus = AVCaptureDevice.GetAuthorizationStatus(AVMediaType.Audio);
-			if (authorizationStatus != AVAuthorizationStatus.Authorized) {
-				await AVCaptureDevice.RequestAccessForMediaTypeAsync(AVMediaType.Audio);
-			}
-		}
+            authorizationStatus = AVCaptureDevice.GetAuthorizationStatus(AVMediaType.Audio);
+            if (authorizationStatus != AVAuthorizationStatus.Authorized) {
+                await AVCaptureDevice.RequestAccessForMediaTypeAsync(AVMediaType.Audio);
+            }
+        }
     }
 }

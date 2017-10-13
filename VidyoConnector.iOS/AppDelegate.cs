@@ -12,11 +12,11 @@ namespace VidyoConnector.iOS
     {
         public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions) {
             global::Xamarin.Forms.Forms.Init();
-			try {
-				LoadApplication(new App(VidyoController.GetInstance()));
-			} catch (Exception e) {
-				Logger.GetInstance().Log(e.Message);
-			}
+            try {
+                LoadApplication(new App(VidyoController.GetInstance()));
+            } catch (Exception e) {
+                Logger.GetInstance().Log(e.Message);
+            }
 
             return base.FinishedLaunching(uiApplication, launchOptions);
         }

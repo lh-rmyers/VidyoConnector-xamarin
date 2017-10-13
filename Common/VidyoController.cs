@@ -25,29 +25,28 @@ namespace VidyoConnector
         // Public properties
         public Controls.NativeView _videoView;
 
-		public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
-		public VidyoConnectorState ConnectorState {
-			get { return _state; }
-			set {
+        public VidyoConnectorState ConnectorState {
+            get { return _state; }
+            set {
                 _state = value;
                 //Raise PropertyChanged event
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs("ConnectorState"));
-			}
-		}
+            }
+        }
 
         public void GetNativeView(Controls.NativeView videoView)
         {
             _videoView = videoView;
         }
 
-		public string OnAppStart()
+        public string OnAppStart()
         {
             string clientVersion = "Failed";
 #if __ANDROID__
-			ConnectorPKG.SetApplicationUIContext(Forms.Context as Activity);
+            ConnectorPKG.SetApplicationUIContext(Forms.Context as Activity);
 #endif
-
             _vidyoClientInitialized = ConnectorPKG.Initialize();
 
             if (_vidyoClientInitialized) {
@@ -83,11 +82,11 @@ namespace VidyoConnector
                     }
                 }
                 catch (Exception e) {
-					_logger.Log("VidyoConnector Construction failed");
-					_logger.Log(e.Message);
+                    _logger.Log("VidyoConnector Construction failed");
+                    _logger.Log(e.Message);
                 }
             } else {
-				_logger.Log("ERROR: VidyoClientInitialize failed - not constructing VidyoConnector ...");
+                _logger.Log("ERROR: VidyoClientInitialize failed - not constructing VidyoConnector ...");
             }
             return clientVersion;
         }
@@ -101,9 +100,9 @@ namespace VidyoConnector
 
         public void OnAppResume()
         {
-			if (_connector != null) {
-				_connector.SetMode(Connector.ConnectorMode.ConnectormodeForeground);
-			}
+            if (_connector != null) {
+                _connector.SetMode(Connector.ConnectorMode.ConnectormodeForeground);
+            }
         }
 
         public void Cleanup()
@@ -170,40 +169,40 @@ namespace VidyoConnector
 
         public void OnFailure(Connector.ConnectorFailReason reason)
         {
-			_logger.Log("OnFailure");
+            _logger.Log("OnFailure");
             ConnectorState = VidyoConnectorState.VidyoConnectorStateConnectionFailure;
-		}
+        }
 
         public void OnDisconnected(Connector.ConnectorDisconnectReason reason) 
         {
-			_logger.Log("OnDisconnected");
+            _logger.Log("OnDisconnected");
             ConnectorState = (reason == Connector.ConnectorDisconnectReason.ConnectordisconnectreasonDisconnected) ?
                 VidyoConnectorState.VidyoConnectorStateDisconnected : VidyoConnectorState.VidyoConnectorStateDisconnectedUnexpected;
-		}
+        }
 
-		public void OnLog(LogRecord logRecord) 
+        public void OnLog(LogRecord logRecord) 
         {
-			_logger.LogClientLib(logRecord.message);
-		}
+            _logger.LogClientLib(logRecord.message);
+        }
 
         public void OnLocalCameraAdded(LocalCamera localCamera) 
         {
-			_logger.Log("OnLocalCameraAdded");
-		}
+            _logger.Log("OnLocalCameraAdded");
+        }
 
         public void OnLocalCameraRemoved(LocalCamera localCamera) 
         {
-			_logger.Log("OnLocalCameraRemoved");
-		}
+            _logger.Log("OnLocalCameraRemoved");
+        }
 
         public void OnLocalCameraSelected(LocalCamera localCamera) 
         {
-			_logger.Log("OnLocalCameraSelected");
-		}
+            _logger.Log("OnLocalCameraSelected");
+        }
 
         public void OnLocalCameraStateUpdated(LocalCamera localCamera, VidyoClient.Device.DeviceState state)
         {
-			_logger.Log("OnLocalCameraStateUpdated");
-		}
+            _logger.Log("OnLocalCameraStateUpdated");
+        }
     }
 }

@@ -10,34 +10,34 @@ namespace VidyoConnector
         // Need this in order to see preview in App.xaml interface builder
         public App()
         {
-			InitializeComponent();
+            InitializeComponent();
             MainPage = new MainPage();
-		}
+        }
 
-		public App(IVidyoController vidyoController)
-		{
-			InitializeComponent();
+        public App(IVidyoController vidyoController)
+        {
+            InitializeComponent();
             MainPage mp = new MainPage();
             mp.Initialize(vidyoController);
             MainPage = mp;
-			_vidyoController = vidyoController;
-		}
+            _vidyoController = vidyoController;
+        }
 
-        protected override void OnStart() 
+        protected override void OnStart()
         {
             // Handle when your app starts
             Debug.WriteLine("OnStart");
             ViewModel.GetInstance().ClientVersion = "v " + _vidyoController.OnAppStart();
         }
 
-        protected override void OnSleep() 
+        protected override void OnSleep()
         {
             // Handle when your app sleeps
             Debug.WriteLine("OnSleep");
             _vidyoController.OnAppSleep();
         }
 
-        protected override void OnResume() 
+        protected override void OnResume()
         {
             // Handle when your app resumes
             Debug.WriteLine("OnResume");

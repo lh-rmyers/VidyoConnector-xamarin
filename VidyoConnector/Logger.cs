@@ -5,20 +5,20 @@ namespace VidyoConnector
 {
     public class Logger
     {
-		private static Logger instance = new Logger();
+        private static Logger instance = new Logger();
 
-		public static Logger GetInstance() { return instance; }
+        public static Logger GetInstance() { return instance; }
 
-		private Logger() {}
+        private Logger() {}
 
-		public void Log(string msg)
+        public void Log(string msg)
         {
-			Debug.WriteLine("VidyoConnector App: " + msg);
-		}
+            Debug.WriteLine("VidyoConnector App: " + msg);
+        }
 
-		public void LogClientLib(string msg)
+        public void LogClientLib(string msg)
         {
-			Debug.WriteLine("VidyoClientLibrary: " + msg);
-		}
+            Debug.WriteLine("VidyoClientLibrary: " + msg);
+        }
     }
 }
