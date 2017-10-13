@@ -23,10 +23,10 @@ namespace VidyoConnector
         string _callImage                = _callStartImage;
         bool   _cameraPrivacy            = false;
         bool   _microphonePrivacy        = false;
-        string _host                     = "trinity-02.eng.vidyo.com"; //"vidyostaging.io"; // "prod.vidyo.io"; //"trinity-02.eng.vidyo.com";
-        string _token                    = "";
-        string _displayName              = "PhilIOS";
-        string _resourceId               = "DemoRoom2";
+        string _host                     = "prod.vidyo.io";
+        string _token                    = ""; // INSERT VALID TOKEN
+        string _displayName              = "XamarinUser";
+        string _resourceId               = "DemoRoom";
         string _toolbarStatus            = "Ready to Connect";
         string _clientVersion            = "v 0.0.00.x";
         VidyoCallAction _callAction      = VidyoCallAction.VidyoCallActionConnect;
