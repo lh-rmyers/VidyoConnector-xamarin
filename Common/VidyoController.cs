@@ -31,7 +31,7 @@ namespace VidyoConnector
             get { return _state; }
             set {
                 _state = value;
-                //Raise PropertyChanged event
+                // Raise PropertyChanged event
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs("ConnectorState"));
             }
         }
@@ -47,6 +47,8 @@ namespace VidyoConnector
 #if __ANDROID__
             ConnectorPKG.SetApplicationUIContext(Forms.Context as Activity);
 #endif
+            // Initialize VidyoClient library.
+            // This should be called only once throughout the lifetime of the app.
             _vidyoClientInitialized = ConnectorPKG.Initialize();
 
             if (_vidyoClientInitialized) {
@@ -108,6 +110,10 @@ namespace VidyoConnector
         public void Cleanup()
         {
             _connector.Disable();
+            _connector = null;
+
+            // Uninitialize VidyoClient library.
+            // This should be called only once throughout the lifetime of the app.
             ConnectorPKG.Uninitialize();
         }
 
