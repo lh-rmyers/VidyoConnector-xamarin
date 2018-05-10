@@ -22,6 +22,10 @@ VidyoConnector-xamarin is a Xamarin Forms cross platform application which conta
 ## Importing VidyoClient iOS SDK
 > Note: the below steps are already performed in the VidyoConnector.iOS project in the VidyoConnector-xamarin solution. These instructions are intended to show how a developer would import the library into their own application. Therefore, do not perform these steps in this application, which would lead to duplicated libraries and compilation errors. For this sample, please make sure you have placed the SDK in the right folder and then skip to the "Build and Run Application" section.
 
+##### Attention (Windows): 
+If you are going to try sample project under Windows platform please remove iOS native frameworks linking:
+- In solution window under Xamarin.iOS project expand  "Native references", select "libVidyoClient.a", press F4 to open specific properties window. Then remove all linked "Frameworks" (AudioToolbox AVFoundation ...). Change this option to be empty. Save solution.
+
 To use the VidyoClient SDK in a Xamarin.iOS app, perform the following steps: 
 
 #### MacOS
@@ -41,7 +45,7 @@ To use the VidyoClient SDK in a Xamarin.iOS app, perform the following steps:
 #### Windows
 
 1. In the solution toolbar, find "Show All Files" option and switch it.
-2. In the solution window, exclude grayed "VidyoClient-iOSSDK" folder to "include > csharp", right-click on "csharp" folder and choose "Include in Project" option.
+2. In the solution window, expand grayed "VidyoClient-iOSSDK" folder to "include > csharp", right-click on "csharp" folder and choose "Include in Project" option.
 3. In the solution window, right-click on the Xamarin.iOS project and select "Add Native Reference" > "Add Native Static Library"
 4. In the file-selection dialog, browse to project subdirectory“VidyoClient-iOSSDK/lib/ios”
 5. From that directory, add one by one  all 6 static library files `lib*.a`. You have to do it 6 times as multi-include may not be allowed.
@@ -71,11 +75,11 @@ To use the VidyoClient SDK in a Xamarin.Android app, perform the following steps
 #### Windows
 
 1. In the solution toolbar, find "Show All Files" option and switch it.
-2. In the solution window, exclude grayed "VidyoClient-AndroidSDK" folder to "include > csharp", right-click on "csharp" folder and choose "Include in Project" option.
-3. In the solution window, exclude grayed "VidyoClient-AndroidSDK" folder to "lib > android", right-click on "android" folder and choose "Include in Project" option.
-4. In the solution window, exclude "android" folder, right-click on "vidyoclient.jar" and choose "Properties".
+2. In the solution window, expand grayed "VidyoClient-AndroidSDK" folder to "include > csharp", right-click on "csharp" folder and choose "Include in Project" option.
+3. In the solution window, expand grayed "VidyoClient-AndroidSDK" folder to "lib > android", right-click on "android" folder and choose "Include in Project" option.
+4. In the solution window, expand "android" folder, right-click on "vidyoclient.jar" and choose "Properties".
 5. In that "Properties" window, go to the "Build action" field and populate it with "AndroidJavaLibrary".
-6. In the excluded "android" folder under each of the 4 architecture folders (arm64-v8a, armeabi-v7a, x86, x86_64), right-click "libVidyoClient.so"; and choose "Properties".
+6. In the expanded "android" folder under each of the 4 architecture folders (arm64-v8a, armeabi-v7a, x86, x86_64), right-click "libVidyoClient.so"; and choose "Properties".
 7. In that "Properties" window, go to the "Build action" field and populate it with "AndroidNativeLibrary".
 
 ## Build and Run Application
