@@ -22,7 +22,7 @@ namespace VidyoConnector
         public void Initialize(IVidyoController vidyoController)
         {
             // Provide the videoView to the Vidyo controller
-            vidyoController.GetNativeView(_videoView);
+            vidyoController.SetNativeView(_videoView);
             _vidyoController = vidyoController;
 
             INotifyPropertyChanged i = (INotifyPropertyChanged)_vidyoController;

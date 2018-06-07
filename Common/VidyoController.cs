@@ -36,7 +36,7 @@ namespace VidyoConnector
             }
         }
 
-        public void GetNativeView(Controls.NativeView videoView)
+        public void SetNativeView(Controls.NativeView videoView)
         {
             _videoView = videoView;
         }

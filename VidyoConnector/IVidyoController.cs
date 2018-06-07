@@ -11,7 +11,7 @@ namespace VidyoConnector
         void OnAppResume();
 
         // Provide the native view
-        void GetNativeView(Controls.NativeView videoView);
+        void SetNativeView(Controls.NativeView videoView);
         VidyoConnectorState ConnectorState { get; set; }
 
         // Events triggered by button clicks from UI
