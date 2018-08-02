@@ -116,6 +116,9 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Renderers\NativeViewRenderer.cs" />
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\Application.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\Application.cs</Link>
+    </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\AudioFrame.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\AudioFrame.cs</Link>
     </Compile>
@@ -125,8 +128,17 @@
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\Calendar.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\Calendar.cs</Link>
     </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarCapabilityKey.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\CalendarCapabilityKey.cs</Link>
+    </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarConnProps.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\CalendarConnProps.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarConnectResult.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\CalendarConnectResult.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarCreateCode.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\CalendarCreateCode.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarFeedback.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\CalendarFeedback.cs</Link>
@@ -172,6 +184,9 @@
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\EndpointStats.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\EndpointStats.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\EventSchedule.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\EventSchedule.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\FormField.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\FormField.cs</Link>
@@ -242,6 +257,9 @@
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\Logger.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\Logger.cs</Link>
     </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\LoggerCategory.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\LoggerCategory.cs</Link>
+    </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MediaConnectionTransportInfo.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\MediaConnectionTransportInfo.cs</Link>
     </Compile>
@@ -256,6 +274,12 @@
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MeetingAttendee.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\MeetingAttendee.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MeetingAttendeesSearchResult.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\MeetingAttendeesSearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MeetingInfo.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\MeetingInfo.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MeetingSearchResult.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\MeetingSearchResult.cs</Link>
@@ -274,6 +298,9 @@
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\ParticipantStats.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\ParticipantStats.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\Property.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\Property.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\RateShaperStats.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\RateShaperStats.cs</Link>

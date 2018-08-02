@@ -127,6 +127,9 @@
     </Compile>
     <Compile Include="Renderers\NativeViewRenderer.cs" />
     <Compile Include="Renderers\CustomEntryRenderer.cs" />
+    <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\Application.cs">
+      <Link>VidyoClient-AndroidSDK\include\csharp\Application.cs</Link>
+    </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\AudioFrame.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\AudioFrame.cs</Link>
     </Compile>
@@ -136,8 +139,17 @@
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\Calendar.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\Calendar.cs</Link>
     </Compile>
+    <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\CalendarCapabilityKey.cs">
+      <Link>VidyoClient-AndroidSDK\include\csharp\CalendarCapabilityKey.cs</Link>
+    </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\CalendarConnProps.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\CalendarConnProps.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\CalendarConnectResult.cs">
+      <Link>VidyoClient-AndroidSDK\include\csharp\CalendarConnectResult.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\CalendarCreateCode.cs">
+      <Link>VidyoClient-AndroidSDK\include\csharp\CalendarCreateCode.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\CalendarFeedback.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\CalendarFeedback.cs</Link>
@@ -183,6 +195,9 @@
     </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\EndpointStats.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\EndpointStats.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\EventSchedule.cs">
+      <Link>VidyoClient-AndroidSDK\include\csharp\EventSchedule.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\FormField.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\FormField.cs</Link>
@@ -253,6 +268,9 @@
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\Logger.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\Logger.cs</Link>
     </Compile>
+    <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\LoggerCategory.cs">
+      <Link>VidyoClient-AndroidSDK\include\csharp\LoggerCategory.cs</Link>
+    </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\MediaConnectionTransportInfo.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\MediaConnectionTransportInfo.cs</Link>
     </Compile>
@@ -267,6 +285,12 @@
     </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\MeetingAttendee.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\MeetingAttendee.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\MeetingAttendeesSearchResult.cs">
+      <Link>VidyoClient-AndroidSDK\include\csharp\MeetingAttendeesSearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\MeetingInfo.cs">
+      <Link>VidyoClient-AndroidSDK\include\csharp\MeetingInfo.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\MeetingSearchResult.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\MeetingSearchResult.cs</Link>
@@ -285,6 +309,9 @@
     </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\ParticipantStats.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\ParticipantStats.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\Property.cs">
+      <Link>VidyoClient-AndroidSDK\include\csharp\Property.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\RateShaperStats.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\RateShaperStats.cs</Link>
