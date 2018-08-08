@@ -1,5 +1,5 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.props')" />
+  <Import Project="..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.props')" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -25,7 +25,7 @@
     <MtouchFastDev>true</MtouchFastDev>
     <IOSDebuggerPort>62856</IOSDebuggerPort>
     <MtouchLink>None</MtouchLink>
-    <MtouchArch>x86_64</MtouchArch>
+    <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
   </PropertyGroup>
@@ -40,7 +40,7 @@
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARM64</MtouchArch>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -53,7 +53,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchLink>None</MtouchLink>
-    <MtouchArch>x86_64</MtouchArch>
+    <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
@@ -73,7 +73,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <IOSDebuggerPort>12397</IOSDebuggerPort>
     <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARM64</MtouchArch>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
 <CustomCommands>
   <CustomCommands>
@@ -90,16 +90,16 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.2.5.0.122203\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform">
-      <HintPath>..\packages\Xamarin.Forms.2.5.0.122203\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform.iOS">
-      <HintPath>..\packages\Xamarin.Forms.2.5.0.122203\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.2.5.0.122203\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +116,9 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Renderers\NativeViewRenderer.cs" />
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\Application.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\Application.cs</Link>
+    </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\AudioFrame.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\AudioFrame.cs</Link>
     </Compile>
@@ -125,11 +128,17 @@
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\Calendar.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\Calendar.cs</Link>
     </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarCapabilityKey.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\CalendarCapabilityKey.cs</Link>
+    </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarConnProps.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\CalendarConnProps.cs</Link>
     </Compile>
-    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarCreateResult.cs">
-      <Link>VidyoClient-iOSSDK\include\csharp\CalendarCreateResult.cs</Link>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarConnectResult.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\CalendarConnectResult.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarCreateCode.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\CalendarCreateCode.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarFeedback.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\CalendarFeedback.cs</Link>
@@ -137,14 +146,8 @@
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarManager.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\CalendarManager.cs</Link>
     </Compile>
-    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarManagerDefaultServices.cs">
-      <Link>VidyoClient-iOSSDK\include\csharp\CalendarManagerDefaultServices.cs</Link>
-    </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarManagerFeedback.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\CalendarManagerFeedback.cs</Link>
-    </Compile>
-    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarServiceCode.cs">
-      <Link>VidyoClient-iOSSDK\include\csharp\CalendarServiceCode.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\CalendarServiceStatus.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\CalendarServiceStatus.cs</Link>
@@ -181,6 +184,9 @@
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\EndpointStats.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\EndpointStats.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\EventSchedule.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\EventSchedule.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\FormField.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\FormField.cs</Link>
@@ -251,6 +257,9 @@
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\Logger.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\Logger.cs</Link>
     </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\LoggerCategory.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\LoggerCategory.cs</Link>
+    </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MediaConnectionTransportInfo.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\MediaConnectionTransportInfo.cs</Link>
     </Compile>
@@ -266,11 +275,17 @@
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MeetingAttendee.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\MeetingAttendee.cs</Link>
     </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MeetingAttendeesSearchResult.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\MeetingAttendeesSearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MeetingFeedback.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\MeetingFeedback.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MeetingInfo.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\MeetingInfo.cs</Link>
+    </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MeetingSearchResult.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\MeetingSearchResult.cs</Link>
-    </Compile>
-    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\MeetingType.cs">
-      <Link>VidyoClient-iOSSDK\include\csharp\MeetingType.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\NetworkInterface.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\NetworkInterface.cs</Link>
@@ -286,6 +301,9 @@
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\ParticipantStats.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\ParticipantStats.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\Property.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\Property.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\RateShaperStats.cs">
       <Link>VidyoClient-iOSSDK\include\csharp\RateShaperStats.cs</Link>
@@ -406,5 +424,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets')" />
-  <Import Project="..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.targets')" />
 </Project>
