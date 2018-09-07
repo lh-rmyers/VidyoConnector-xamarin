@@ -111,17 +111,20 @@ namespace VidyoConnector
             }
         }
 
+        // For some reason, when OnSizeAllocated method is contained, the UI preview in MainPage.xaml.cs is not shown.
+        // Set #if to false if you want to see a valid preview of the UI.
+#if true
+        // Handle orientation change
         protected override void OnSizeAllocated(double width, double height)
         {
             base.OnSizeAllocated(width, height);
 
-            if (Math.Abs(width - _pageWidth) > 0.001 || Math.Abs(height - _pageHeight) > 0.001)
-            {
+            if (Math.Abs(width - _pageWidth) > 0.001 || Math.Abs(height - _pageHeight) > 0.001) {
                 _pageWidth = width;
                 _pageHeight = height;
-                if (_vidyoController != null)
-                    _vidyoController.OnOrientationChange();
+                _vidyoController.OnOrientationChange();
             }
         }
+#endif
     }
 }
