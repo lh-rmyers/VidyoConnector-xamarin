@@ -18,6 +18,7 @@ namespace VidyoConnector
         Connector _connector = null;
         bool      _vidyoClientInitialized = false;
         bool      _enableDebug = false;
+        private bool _userSetPrivacy = false;
         string    _experimentalOptions = null;
         Logger    _logger = Logger.GetInstance();
         VidyoConnectorState _state;
@@ -96,6 +97,12 @@ namespace VidyoConnector
         public void OnAppSleep()
         {
             if (_connector != null) {
+                //IOS disables the camera when applications are sent to the background 
+                //see https://stackoverflow.com/questions/38278216/has-apple-officially-not-allowed-access-to-camera-for-app-in-background
+                //to prevent the camera from freezing when the app moves into the backround set privacy to true
+#if __IOS__
+                _connector.SetCameraPrivacy(true);
+#endif
                 _connector.SetMode(Connector.ConnectorMode.ConnectormodeBackground);
             }
         }
@@ -103,6 +110,12 @@ namespace VidyoConnector
         public void OnAppResume()
         {
             if (_connector != null) {
+                //IOS disables the camera when applications are sent to the background 
+                //see https://stackoverflow.com/questions/38278216/has-apple-officially-not-allowed-access-to-camera-for-app-in-background
+                //when the app re-enters the foreground set the privacy back to it's previous setting
+#if __IOS__
+                _connector.SetCameraPrivacy(this._userSetPrivacy);
+#endif
                 _connector.SetMode(Connector.ConnectorMode.ConnectormodeForeground);
             }
         }
@@ -136,6 +149,7 @@ namespace VidyoConnector
         // Set the camera privacy
         public void SetCameraPrivacy(bool privacy)
         {
+            this._userSetPrivacy = privacy;
             _connector.SetCameraPrivacy(privacy);
         }
 
