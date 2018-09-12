@@ -75,14 +75,14 @@
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-<CustomCommands>
-  <CustomCommands>
-    <Command>
-      <type>AfterBuild</type>
-      <command></command>
-    </Command>
-  </CustomCommands>
-</CustomCommands>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command></command>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -106,9 +106,17 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\icon_2436x1125.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\icon_1125x2436.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\icon_1242x2208.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\icon_750x1334.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\icon_2208x1242.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\icon_640x1136.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\icon_640x980.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_29x29%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_60x60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_40x40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_20x20%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -421,6 +429,9 @@
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets')" />
