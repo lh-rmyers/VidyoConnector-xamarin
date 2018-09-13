@@ -20,6 +20,8 @@ namespace VidyoConnector
         void SetMicrophonePrivacy(bool privacy);
         void SetCameraPrivacy(bool privacy);
         void CycleCamera();
+        void EnableDebugging();
+        void DisableDebugging();
 
         // Orientation has changed
         void OnOrientationChange();

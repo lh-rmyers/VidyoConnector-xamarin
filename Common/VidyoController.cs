@@ -224,5 +224,13 @@ namespace VidyoConnector
         {
             _logger.Log("OnLocalCameraStateUpdated");
         }
+        public void EnableDebugging()
+        {
+            _connector.EnableDebug(7776, "warning info@VidyoClient info@VidyoConnector");
+        }
+        public void DisableDebugging()
+        {
+            _connector.DisableDebug();
+        }
     }
 }

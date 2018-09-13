@@ -70,6 +70,21 @@ namespace VidyoConnector
             _vidyoController.CycleCamera();
         }
 
+        void DiagnosticsButtonClicked(object sender, EventArgs args)
+        {
+            _viewModel.DisplayDiagnostics = !_viewModel.DisplayDiagnostics;
+            if (_viewModel.DisplayDiagnostics)
+            {
+                ClientVersionLabel.IsVisible = true;
+                _vidyoController.EnableDebugging();
+            }
+            else
+            {
+                ClientVersionLabel.IsVisible = false;
+                _vidyoController.DisableDebugging();
+            }
+        }
+
         VidyoConnectorState VidyoConnectorState
         {
             set

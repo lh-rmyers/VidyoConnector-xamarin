@@ -395,6 +395,7 @@
     <BundleResource Include="Resources\camera_switch.png" />
     <BundleResource Include="Resources\microphone_off.png" />
     <BundleResource Include="Resources\microphone_on.png" />
+    <BundleResource Include="Resources\gear.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

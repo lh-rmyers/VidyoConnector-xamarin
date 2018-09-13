@@ -52,6 +52,7 @@
                         <Entry Placeholder="required" Text="{Binding ResourceId, Mode=TwoWay}" FontSize="10" WidthRequest="180" HeightRequest="30"  BackgroundColor="#F0F3F4"/>
                 </StackLayout>
                 <Entry HeightRequest="1" BackgroundColor="#A9AAAB"/>
+                <Label x:Name="ClientVersionLabel" IsVisible="false" Text="{Binding ClientVersion}" TextColor="Red" FontSize="15" HeightRequest="30" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
                 <ActivityIndicator x:Name="_connectionSpinner" IsRunning="false" HeightRequest="15"/>
             </StackLayout>
@@ -87,14 +88,17 @@
             Grid.ColumnSpan="2"
             VerticalOptions="Center"
             HorizontalOptions="Center" />
-        <Label
-            Text="{Binding ClientVersion}"
-            TextColor="White"
-            FontSize="10"
+        <Image 
+            Source="gear.png"
             Grid.Row="4"
-            Grid.Column="4"
-            Grid.ColumnSpan="2"
-            VerticalOptions="Center"
-            HorizontalOptions="End" />
+            Grid.Column="5"
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            HeightRequest="75" 
+            WidthRequest="75">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="DiagnosticsButtonClicked"/>
+            </Image.GestureRecognizers>
+        </Image>
     </Grid>
 </ContentPage>

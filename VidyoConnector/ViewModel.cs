@@ -8,7 +8,10 @@ namespace VidyoConnector
     {
         private static ViewModel _instance = new ViewModel();
         public static ViewModel GetInstance() { return _instance; }
-        private ViewModel() {}
+        private ViewModel() 
+        { 
+            this.DisplayDiagnostics = false; 
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -18,6 +21,7 @@ namespace VidyoConnector
         const string _microphoneOffImage = "microphone_off.png";
         const string _callStartImage     = "call_start.png";
         const string _callEndImage       = "call_end.png";
+        const string _gearIMage          = "gear.png";
         string _cameraPrivacyImage       = _cameraOnImage;
         string _microphonePrivacyImage   = _microphoneOnImage;
         string _callImage                = _callStartImage;
@@ -148,6 +152,8 @@ namespace VidyoConnector
                 }
             }
         }
+
+        public bool DisplayDiagnostics { get; set; }
 
         public string MicrophonePrivacyImage
         {
