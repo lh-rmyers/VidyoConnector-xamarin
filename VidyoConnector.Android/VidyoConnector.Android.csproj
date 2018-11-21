@@ -11,7 +11,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>VidyoConnector.Android</RootNamespace>
     <AssemblyName>VidyoConnector.Android</AssemblyName>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -381,6 +381,9 @@
     </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\VirtualShareManager.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\VirtualShareManager.cs</Link>
+    </Compile>
+    <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\VirtualWindowShare.cs">
+      <Link>VidyoClient-AndroidSDK\include\csharp\VirtualWindowShare.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>

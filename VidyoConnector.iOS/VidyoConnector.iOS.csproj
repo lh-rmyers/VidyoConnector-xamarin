@@ -374,6 +374,9 @@
       <Link>VidyoClient-iOSSDK\include\csharp\VirtualShareManager.cs</Link>
     </Compile>
     <None Include="packages.config" />
+    <Compile Include="..\VidyoClient-iOSSDK\include\csharp\VirtualWindowShare.cs">
+      <Link>VidyoClient-iOSSDK\include\csharp\VirtualWindowShare.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Common\VidyoController.cs">
