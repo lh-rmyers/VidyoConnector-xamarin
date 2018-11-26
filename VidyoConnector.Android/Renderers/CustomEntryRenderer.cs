@@ -12,6 +12,10 @@ namespace VidyoConnector.Android
             // Hides the underlined text in the Xamarin.Forms.Entry UI item
             base.OnElementChanged(e);
             Control?.SetBackgroundColor(Color.Transparent);
+            if (Control != null)
+            {
+                Control.SetPadding(10, 30, 10, 0);
+            }
         }
     }
 }
