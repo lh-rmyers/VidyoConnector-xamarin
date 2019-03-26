@@ -277,6 +277,9 @@
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\LoggerCategory.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\LoggerCategory.cs</Link>
     </Compile>
+    <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\MarshalPtrToUtf8.cs">
+      <Link>VidyoClient-AndroidSDK\include\csharp\MarshalPtrToUtf8.cs</Link>
+    </Compile>
     <Compile Include="..\VidyoClient-AndroidSDK\include\csharp\MediaConnectionTransportInfo.cs">
       <Link>VidyoClient-AndroidSDK\include\csharp\MediaConnectionTransportInfo.cs</Link>
     </Compile>
