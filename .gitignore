@@ -13,6 +13,7 @@ packages
 # SDKs acquired from developer.vidyo.io
 VidyoClient-AndroidSDK
 VidyoClient-iOSSDK
+VidyoClient-WinVS2017SDK
 
 # Per-user data
 *.DS_Store

@@ -27,7 +27,8 @@ namespace VidyoConnector
         {
             // Handle when your app starts
             Debug.WriteLine("OnStart");
-            ViewModel.GetInstance().ClientVersion = "v " + _vidyoController.OnAppStart();
+            ViewModel thisModel = ViewModel.GetInstance();
+            thisModel.ClientVersion = "v " + _vidyoController.OnAppStart();
         }
 
         protected override void OnSleep()
