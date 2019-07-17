@@ -8,7 +8,7 @@ namespace VidyoConnector.WPF.Renderers
 {
     public class NativeViewRenderer : ViewRenderer<Controls.NativeView, Canvas>
     {
-        Canvas _uiView;
+        private Canvas _uiView;
 
         protected override void OnElementChanged(ElementChangedEventArgs<Controls.NativeView> e)
         {
@@ -26,7 +26,7 @@ namespace VidyoConnector.WPF.Renderers
 
         private void Control_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            HwndSource panelHwnd = (HwndSource)System.Windows.PresentationSource.FromVisual(_uiView);
+            var panelHwnd = (HwndSource)System.Windows.PresentationSource.FromVisual(_uiView);
             if (panelHwnd != null)
             {
                 VidyoController vidyoController = VidyoController.GetInstance();

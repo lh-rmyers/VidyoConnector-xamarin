@@ -181,7 +181,13 @@ namespace VidyoConnector
             if (_connector != null) {
                 uint w = _videoView.NativeWidth;
                 uint h = _videoView.NativeHeight;
+#if WINDOWS_WPF
+                //TODO: Figure out how to properly position the video preview here.
+                //For other platforms it shows up in the background, but WPF causes it to be on top of the UI.
+                _connector.ShowViewAtPoints(_videoView.Handle, 0, 110, 250, 250);
+#else
                 _connector.ShowViewAt(_videoView.Handle, 0, 0, w, h);
+#endif
                 _logger.Log("VidyoConnectorShowViewAt: x = 0, y = 0, w = " + w + ", h = " + h);
             }
         }
