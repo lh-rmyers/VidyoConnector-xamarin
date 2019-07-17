@@ -12,7 +12,7 @@ namespace VidyoConnector.WPF
         {
             InitializeComponent();
             Forms.Init();
-            LoadApplication(new VidyoConnector.App(VidyoConnector.VidyoController.GetInstance()));
+            LoadApplication(new VidyoConnector.App(VidyoController.GetInstance()));
         }
     }
 }

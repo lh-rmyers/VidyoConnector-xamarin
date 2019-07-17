@@ -138,6 +138,7 @@
     <Compile Include="..\Common\VidyoController.cs">
       <Link>VidyoController.cs</Link>
     </Compile>
+    <Compile Include="Renderers\NativeViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

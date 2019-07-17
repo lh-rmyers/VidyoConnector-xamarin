@@ -42,6 +42,12 @@ namespace VidyoConnector
             _videoView = videoView;
         }
 
+        public void SetNativeHandle(IntPtr handle)
+        {
+            this._videoView.Handle = handle;
+            OnAppStart();
+        }
+
         public string OnAppStart()
         {
             string clientVersion = "Failed";
