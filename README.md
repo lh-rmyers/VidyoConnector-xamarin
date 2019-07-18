@@ -20,9 +20,9 @@ VidyoConnector-xamarin is a Xamarin Forms cross platform application which conta
 3. Download the latest Vidyo.io Android SDK package: https://static.vidyo.io/latest/package/VidyoClient-AndroidSDK.zip
 4. **Move the unzipped VidyoClient-AndroidSDK folder to the VidyoConnector-xamarin directory.**
 5. Download the latest Vidyo.io Windows SDK package: https://static.vidyo.io/latest/package/VidyoClient-WinVS2017SDK.zip
-6: **Move the unzipped VidyoClient-WinVS2017SDK folder to the VidyoConnector-xamarin directory.**
+6. **Move the unzipped VidyoClient-WinVS2017SDK folder to the VidyoConnector-xamarin directory.**
 7. Download the latest Vidyo.io Windows SDK package: https://static.vidyo.io/latest/package/VidyoClient-OSXSDK.zip
-8: **Move the unzipped VidyoClient-OSXSDK folder to the VidyoConnector-xamarin directory.**
+8. **Move the unzipped VidyoClient-OSXSDK folder to the VidyoConnector-xamarin directory.**
 
 > Note: VidyoClient SDK version 4.1.25.30 or later is required.
 
