@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -358,6 +359,7 @@
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\VirtualWindowShare.cs">
       <Link>VidyoClient-OSXSDK\include\csharpVirtualWindowShare.cs</Link>
     </Compile>
+    <Compile Include="Renderers\NativeViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />

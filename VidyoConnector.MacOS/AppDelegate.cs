@@ -12,7 +12,6 @@ namespace VidyoConnector.MacOS
 
         public override NSWindow MainWindow => _window;
 
-
         public AppDelegate()
         {
             var style = NSWindowStyle.Closable | NSWindowStyle.Resizable | NSWindowStyle.Titled;
