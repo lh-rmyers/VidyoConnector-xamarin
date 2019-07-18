@@ -12,7 +12,7 @@ vidyo.io-connector-xamarin is a Xamarin Forms cross platform application which c
 5. VidyoConnector.MacOS : MacOS Cocoa application which leverages the VidyoConnector PCL in building it's UI.
 6. VidyoConnector.UWP : UWP application which leverages the VidyoConnector PCL in building it's UI.
 
-## Acquire VidyoClient iOS, Android and Windows SDKs
+## Acquire VidyoClient iOS, Android, Windows and MacOS SDKs
 > Note: Highlighted steps are very important because samples already contain configurations specified below and both SDK packages are linked as relative folders located in VidyoConnector-xamarin directory.
 
 1. Download the latest Vidyo.io iOS SDK package: https://static.vidyo.io/latest/package/VidyoClient-iOSSDK.zip
@@ -21,7 +21,7 @@ vidyo.io-connector-xamarin is a Xamarin Forms cross platform application which c
 4. **Move the unzipped VidyoClient-AndroidSDK folder to the VidyoConnector-xamarin directory.**
 5. Download the latest Vidyo.io Windows SDK package: https://static.vidyo.io/latest/package/VidyoClient-WinVS2017SDK.zip
 6. **Move the unzipped VidyoClient-WinVS2017SDK folder to the VidyoConnector-xamarin directory.**
-7. Download the latest Vidyo.io Windows SDK package: https://static.vidyo.io/latest/package/VidyoClient-OSXSDK.zip
+7. Download the latest Vidyo.io MacOS SDK package: https://static.vidyo.io/latest/package/VidyoClient-OSXSDK.zip
 8. **Move the unzipped VidyoClient-OSXSDK folder to the VidyoConnector-xamarin directory.**
 
 > Note: VidyoClient SDK version 4.1.25.30 or later is required.
