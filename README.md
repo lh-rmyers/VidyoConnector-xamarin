@@ -1,10 +1,10 @@
-# VidyoConnector-xamarin
+# vidyo.io-connector-xamarin
 
 ## Clone Repository
-git clone https://github.com/Vidyo/VidyoConnector-xamarin.git
+git clone https://github.com/Vidyo/vidyo.io-connector-xamarin.git
 
 ## Overview
-VidyoConnector-xamarin is a Xamarin Forms cross platform application which contains three projects:
+vidyo.io-connector-xamarin is a Xamarin Forms cross platform application which contains three projects:
 1. VidyoConnector         : Portable Class Library (PCL) containing shared code that can be used in Xamarin.iOS and Xamarin.Android (and more).
 2. VidyoConnector.iOS     : iOS application which leverages the VidyoConnector PCL in building it's UI.
 3. VidyoConnector.Android : Android application which leverages the VidyoConnector PCL in building it's UI.
