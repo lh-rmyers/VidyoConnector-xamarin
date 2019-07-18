@@ -25,7 +25,7 @@ namespace VidyoConnector.MacOS
         public override void DidFinishLaunching(NSNotification notification)
         {
             Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new VidyoConnector.App(VidyoController.GetInstance()));
             base.DidFinishLaunching(notification);
         }
 
