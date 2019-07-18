@@ -427,6 +427,18 @@
       <SmartLink>False</SmartLink>
     </NativeReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\call_end.png" />
+    <BundleResource Include="Resources\call_start.png" />
+    <BundleResource Include="Resources\camera_off.png" />
+    <BundleResource Include="Resources\camera_on.png" />
+    <BundleResource Include="Resources\camera_switch.png" />
+    <BundleResource Include="Resources\gear.png" />
+    <BundleResource Include="Resources\microphone_off.png" />
+    <BundleResource Include="Resources\microphone_on.png" />
+    <BundleResource Include="Resources\vidyo_io.png" />
+    <BundleResource Include="Resources\Vidyo.io-Vertical-Dark%402x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.4.1.0.581479\build\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.4.1.0.581479\build\Xamarin.Forms.targets')" />
 </Project>

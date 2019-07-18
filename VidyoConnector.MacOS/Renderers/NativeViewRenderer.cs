@@ -19,7 +19,6 @@ namespace VidyoConnector.MacOS
                 // Instantiate the native control and assign it to the Control property with
                 // the SetNativeControl method
                 _nsView = new NSView();
-                _nsView.NeedsLayout = true;
                 SetNativeControl(_nsView);
             }
 
