@@ -15,6 +15,15 @@ namespace VidyoConnector
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+#if WINDOWS_WPF
+        const string _cameraOnImage      = @"Assets\camera_on.png";
+        const string _cameraOffImage     = @"Assets\camera_off.png";
+        const string _microphoneOnImage  = @"Assets\microphone_on.png";
+        const string _microphoneOffImage = @"Assets\microphone_off.png";
+        const string _callStartImage     = @"Assets\call_start.png";
+        const string _callEndImage       = @"Assets\call_end.png";
+        const string _gearIMage          = @"Assets\gear.png";
+#else
         const string _cameraOnImage      = "camera_on.png";
         const string _cameraOffImage     = "camera_off.png";
         const string _microphoneOnImage  = "microphone_on.png";
@@ -22,6 +31,7 @@ namespace VidyoConnector
         const string _callStartImage     = "call_start.png";
         const string _callEndImage       = "call_end.png";
         const string _gearIMage          = "gear.png";
+#endif
         string _cameraPrivacyImage       = _cameraOnImage;
         string _microphonePrivacyImage   = _microphoneOnImage;
         string _callImage                = _callStartImage;
