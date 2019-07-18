@@ -26,5 +26,9 @@
 	<string>NSApplication</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Used for Video Conferencing</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Used for Video Conferencing</string>
 </dict>
 </plist>
