@@ -14,6 +14,7 @@ packages
 VidyoClient-AndroidSDK
 VidyoClient-iOSSDK
 VidyoClient-WinVS2017SDK
+VidyoClient-OSXSDK
 
 # Per-user data
 *.DS_Store

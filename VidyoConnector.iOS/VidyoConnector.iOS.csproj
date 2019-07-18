@@ -87,8 +87,7 @@
       <CustomCommands>
         <Command>
           <type>AfterBuild</type>
-          <command>
-          </command>
+          <command></command>
         </Command>
       </CustomCommands>
     </CustomCommands>
