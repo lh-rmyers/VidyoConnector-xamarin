@@ -10,7 +10,7 @@ namespace VidyoConnector.MacOS
     {
         NSView _nsView;
 
-        protected override async void OnElementChanged(Xamarin.Forms.Platform.MacOS.ElementChangedEventArgs<Controls.NativeView> e)
+        protected override void OnElementChanged(Xamarin.Forms.Platform.MacOS.ElementChangedEventArgs<Controls.NativeView> e)
         {
             base.OnElementChanged(e);
 
@@ -32,7 +32,7 @@ namespace VidyoConnector.MacOS
             {
                 // Configure the control and subscribe to event handlers
                 e.NewElement.Handle = this.Control.Handle;
-                await this.AuthorizeMediaUse();
+                //await this.AuthorizeMediaUse();
             }
         }
 
