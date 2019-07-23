@@ -1,46 +1,40 @@
-﻿//using Windows.UI.Xaml.Controls;
-//using Windows.UI.Xaml.Media;
-//using Xamarin.Forms.Platform.UWP;
+﻿using Windows.UI.Xaml;
+using Xamarin.Forms.Platform.UWP;
+using Windows.UI.Xaml.Controls;
+using System;
 
+[assembly: ExportRenderer(typeof(VidyoConnector.Controls.NativeView), typeof(VidyoConnector.UWP.Renderers.NativeViewRenderer))]
 
-//[assembly: ExportRenderer(typeof(VidyoConnector.Controls.NativeView), typeof(VidyoConnector.UWP.NativeViewRenderer))]
+namespace VidyoConnector.UWP.Renderers
+{
+    public class NativeViewRenderer : ViewRenderer<Controls.NativeView, Canvas>
+    {
+        private Canvas _uiView;
 
-//namespace VidyoConnector.UWP
-//{
-//    public class NativeViewRenderer : ViewRenderer<Controls.NativeView, Windows.UI.Xaml.Controls.Panel>
-//    {
-//        CaptureElement _captureElement;
-//        bool _isPreviewing;
+        protected override void OnElementChanged(ElementChangedEventArgs<Controls.NativeView> e)
+        {
+            base.OnElementChanged(e);
 
-//        public NativeViewRenderer() { }
+            if (Control == null)
+            {
+                _uiView = new Canvas();
 
-//        protected override void OnElementChanged(ElementChangedEventArgs<Controls.NativeView> e)
-//        {
-//            base.OnElementChanged(e);
+                SetNativeControl(_uiView);
+            }
+            
+            Control.Loaded += Control_Loaded;
+        }
 
-//            if (Control == null)
-//            {
-//                // Instantiate the native control and assign it to the Control property with
-//                // the SetNativeControl method
-//                _captureElement = new CaptureElement();
-//                _captureElement.Stretch = Stretch.UniformToFill;
-
-//                //SetupCamera();
-//                SetNativeControl(_captureElement);
-//            }
-
-//            if (e.OldElement != null)
-//            {
-//                // Unsubscribe from event handlers and cleanup any resources
-//                VidyoController.GetInstance().Cleanup();
-//            }
-
-//            if (e.NewElement != null)
-//            {
-//                // Configure the control and subscribe to event handlers
-
-//                e.NewElement.Handle = this.Control.Handle;
-//            }
-//        }
-//    }
-//}
+        private void Control_Loaded(object sender, RoutedEventArgs e)
+        {
+            var panelHwnd = new IntPtr(); //(HwndSource)System.Windows.PresentationSource.FromVisual(_uiView);
+            if (panelHwnd != null)
+            {
+                VidyoController vidyoController = VidyoController.GetInstance();
+                //this sets the _videoView's handle and calls appStart
+                //vidyoController.SetNativeHandle(panelHwnd.Handle);
+                vidyoController.OnAppStart();
+            }
+        }
+    }
+}

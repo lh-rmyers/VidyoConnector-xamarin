@@ -2,6 +2,8 @@
 using System.ComponentModel;
 using VidyoClient;
 using Xamarin.Forms;
+using Device = VidyoClient.Device;
+
 #if __ANDROID__
 using Android.App;
 #endif
@@ -185,9 +187,18 @@ namespace VidyoConnector
                 uint w = _videoView.NativeWidth;
                 uint h = _videoView.NativeHeight;
 #if WINDOWS_WPF
+                const int headerHeight = 100;
+                const uint footerHeight = 100;
                 //TODO: Figure out how to properly position the video preview here.
                 //For other platforms it shows up in the background, but WPF causes it to be on top of the UI.
-                _connector.ShowViewAtPoints(_videoView.Handle, 0, 110, 250, 250);
+                if (ConnectorState == VidyoConnectorState.VidyoConnectorStateConnected)
+                {
+                    _connector.ShowViewAtPoints(_videoView.Handle, 0, headerHeight, w, h - footerHeight);
+                }
+                else
+                {
+                    _connector.ShowViewAtPoints(_videoView.Handle, 0, headerHeight, 250, 250);
+                }
 #else
                 _connector.ShowViewAt(_videoView.Handle, 0, 0, w, h);
 #endif
@@ -199,6 +210,9 @@ namespace VidyoConnector
         {
             _logger.Log("OnSuccess");
             ConnectorState = VidyoConnectorState.VidyoConnectorStateConnected;
+
+            if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.WPF)
+                RefreshUI();
         }
 
         public void OnFailure(Connector.ConnectorFailReason reason)
@@ -212,6 +226,9 @@ namespace VidyoConnector
             _logger.Log("OnDisconnected");
             ConnectorState = (reason == Connector.ConnectorDisconnectReason.ConnectordisconnectreasonDisconnected) ?
                 VidyoConnectorState.VidyoConnectorStateDisconnected : VidyoConnectorState.VidyoConnectorStateDisconnectedUnexpected;
+
+            if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.WPF)
+                RefreshUI();
         }
 
         public void OnLog(LogRecord logRecord) 
