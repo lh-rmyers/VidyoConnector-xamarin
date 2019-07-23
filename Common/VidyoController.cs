@@ -122,6 +122,9 @@ namespace VidyoConnector
                 _connector.SetCameraPrivacy(this._userSetPrivacy);
 #endif
                 _connector.SetMode(Connector.ConnectorMode.ConnectormodeForeground);
+
+                if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.macOS)
+                    RefreshUI();
             }
         }
 
