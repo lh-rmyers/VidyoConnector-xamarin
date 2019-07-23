@@ -261,7 +261,7 @@
       <Link>VidyoClient-OSXSDK\include\csharp\MeetingActionResult.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\MeetingAttendee.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpMeetingAttendee.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\MeetingAttendee.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\MeetingAttendeesSearchResult.cs">
       <Link>VidyoClient-OSXSDK\include\csharp\MeetingAttendeesSearchResult.cs</Link>
@@ -285,79 +285,79 @@
       <Link>VidyoClient-OSXSDK\include\csharp\Participant.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\ParticipantGenerationStats.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpParticipantGenerationStats.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\ParticipantGenerationStats.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\ParticipantStats.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpParticipantStats.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\ParticipantStats.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\Property.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpProperty.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\Property.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RateShaperStats.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRateShaperStats.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RateShaperStats.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RemoteCamera.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRemoteCamera.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RemoteCamera.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RemoteMicrophone.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRemoteMicrophone.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RemoteMicrophone.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RemoteMicrophoneStats.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRemoteMicrophoneStats.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RemoteMicrophoneStats.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RemoteRenderer.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRemoteRenderer.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RemoteRenderer.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RemoteRendererStreamStats.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRemoteRendererStreamStats.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RemoteRendererStreamStats.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RemoteSpeaker.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRemoteSpeaker.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RemoteSpeaker.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RemoteSpeakerStreamStats.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRemoteSpeakerStreamStats.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RemoteSpeakerStreamStats.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RemoteVideoSourceStats.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRemoteVideoSourceStats.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RemoteVideoSourceStats.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RemoteWindowShare.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRemoteWindowShare.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RemoteWindowShare.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\Room.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRoom.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\Room.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RoomInfo.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRoomInfo.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RoomInfo.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\RoomStats.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpRoomStats.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\RoomStats.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\Statistics.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpStatistics.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\Statistics.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\User.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpUser.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\User.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\UserStats.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpUserStats.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\UserStats.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\VideoCapability.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpVideoCapability.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\VideoCapability.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\VideoFrame.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpVideoFrame.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\VideoFrame.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\VideoPlane.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpVideoPlane.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\VideoPlane.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\VirtualDeviceManager.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpVirtualDeviceManager.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\VirtualDeviceManager.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\VirtualShareManager.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpVirtualShareManager.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\VirtualShareManager.cs</Link>
     </Compile>
     <Compile Include="..\VidyoClient-OSXSDK\include\csharp\VirtualWindowShare.cs">
-      <Link>VidyoClient-OSXSDK\include\csharpVirtualWindowShare.cs</Link>
+      <Link>VidyoClient-OSXSDK\include\csharp\VirtualWindowShare.cs</Link>
     </Compile>
     <Compile Include="Renderers\NativeViewRenderer.cs" />
   </ItemGroup>
