@@ -30,7 +30,7 @@
             BackgroundColor="Silver">
 
             <StackLayout>
-                <Image Source="vidyo_io.png" HeightRequest="100" WidthRequest="100"/>
+                <Image Source="{Binding VidyoLogoImage}" HeightRequest="100" WidthRequest="100"/>
                 <Entry HeightRequest="1" BackgroundColor="#A9AAAB"/>
                 <StackLayout Orientation="Horizontal">
                         <Label Text="Host" FontSize="10" WidthRequest="80" HeightRequest="30" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
@@ -64,7 +64,7 @@
             </Image.GestureRecognizers>
         </Image>
 
-        <Image Source="camera_switch.png" Grid.Row="3" Grid.Column="2">
+        <Image Source="{Binding CameraSwitchImage}" Grid.Row="3" Grid.Column="2">
             <Image.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnCycleCameraButtonClicked"/>
             </Image.GestureRecognizers>
