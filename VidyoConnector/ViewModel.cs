@@ -10,19 +10,24 @@ namespace VidyoConnector
         public static ViewModel GetInstance() { return _instance; }
         private ViewModel() 
         { 
-            this.DisplayDiagnostics = false; 
+            this.DisplayDiagnostics = false;
+            CameraSwitchImage = _cameraSwitchImage;
+            VidyoLogoImage = _vidyoLogoImage;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-#if WINDOWS_WPF
+#if __WINDOWS_WPF__
         const string _cameraOnImage      = @"Assets\camera_on.png";
         const string _cameraOffImage     = @"Assets\camera_off.png";
         const string _microphoneOnImage  = @"Assets\microphone_on.png";
         const string _microphoneOffImage = @"Assets\microphone_off.png";
         const string _callStartImage     = @"Assets\call_start.png";
         const string _callEndImage       = @"Assets\call_end.png";
-        const string _gearIMage          = @"Assets\gear.png";
+        const string _gearImage          = @"Assets\gear.png";
+        static string _cameraSwitchImage  = @"Assets\camera_switch.png";
+        static string _vidyoLogoImage     = @"Assets\vidyo_io.png";
+
 #else
         const string _cameraOnImage      = "camera_on.png";
         const string _cameraOffImage     = "camera_off.png";
@@ -30,7 +35,9 @@ namespace VidyoConnector
         const string _microphoneOffImage = "microphone_off.png";
         const string _callStartImage     = "call_start.png";
         const string _callEndImage       = "call_end.png";
-        const string _gearIMage          = "gear.png";
+        const string _gearImage          = "gear.png";
+        static string _cameraSwitchImage  = "camera_switch.png";
+        static string _vidyoLogoImage     = "vidyo_io.png";
 #endif
         string _cameraPrivacyImage       = _cameraOnImage;
         string _microphonePrivacyImage   = _microphoneOnImage;
@@ -159,6 +166,32 @@ namespace VidyoConnector
                 if (_cameraPrivacyImage != value) {
                     _cameraPrivacyImage = value;
                     OnPropertyChanged("CameraPrivacyImage");
+                }
+            }
+        }
+
+        public string CameraSwitchImage
+        {
+            get { return _cameraSwitchImage; }
+            set
+            {
+                if (_cameraSwitchImage != value)
+                {
+                    _cameraSwitchImage = value;
+                    OnPropertyChanged("CameraSwitchImage");
+                }
+            }
+        }
+
+        public string VidyoLogoImage
+        {
+            get { return _vidyoLogoImage; }
+            set
+            {
+                if (_vidyoLogoImage != value)
+                {
+                    _vidyoLogoImage = value;
+                    OnPropertyChanged("VidyoLogoImage");
                 }
             }
         }
