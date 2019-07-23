@@ -23,7 +23,7 @@ vidyo.io-connector-xamarin is a Xamarin Forms cross platform application which c
 6. **Move the unzipped VidyoClient-WinVS2017SDK folder to the VidyoConnector-xamarin directory.**
 7. Download the latest Vidyo.io MacOS SDK package: https://static.vidyo.io/latest/package/VidyoClient-OSXSDK.zip
 8. **Move the unzipped VidyoClient-OSXSDK folder to the VidyoConnector-xamarin directory.**
-9. Change the following to `#if __IOS__ ...` in the importLib string to `#if __IOS__ || __MACOS__` in the following files: `LogRecords.cs, LocalCamera.cs, Connector.cs and ConnectorPKG.cs` (Doing it in all files causes compilation errors)
+9. Run the following command in the root of the project folder `find VidyoClient-OSXSDK/include/csharp/ -name "*.cs" ! -name "VirtualWindowShare.cs" | xargs perl -i -0pe 's/#if __IOS__\n\t\tconst string importLib/#if __IOS__ || __MACOS__\n\t\tconst string importLib/'` 
 
 > Note: VidyoClient SDK version 4.1.25.30 or later is required.
 
