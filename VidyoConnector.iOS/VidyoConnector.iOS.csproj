@@ -87,7 +87,8 @@
       <CustomCommands>
         <Command>
           <type>AfterBuild</type>
-          <command></command>
+          <command>
+          </command>
         </Command>
       </CustomCommands>
     </CustomCommands>
@@ -158,6 +159,7 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="CryptoService.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Renderers\NativeViewRenderer.cs" />
     <Compile Include="..\VidyoClient-iOSSDK\include\csharp\Application.cs">

@@ -42,6 +42,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ICryptoService.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -49,6 +50,7 @@
     <Compile Include="NativeView.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="IVidyoController.cs" />
+    <Compile Include="TokenGenerator.cs" />
     <Compile Include="ViewModel.cs" />
     <Compile Include="VidyoDefs.cs" />
   </ItemGroup>

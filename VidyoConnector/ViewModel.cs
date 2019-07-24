@@ -1,6 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using Xamarin.Forms;
+﻿using System.ComponentModel;
 
 namespace VidyoConnector
 {
@@ -8,16 +6,22 @@ namespace VidyoConnector
     {
         private static ViewModel _instance = new ViewModel();
         public static ViewModel GetInstance() { return _instance; }
-        private ViewModel() 
-        { 
+
+        private TokenGenerator _tokenGenerator;
+
+        private ViewModel()
+        {
             this.DisplayDiagnostics = false;
             CameraSwitchImage = _cameraSwitchImage;
             VidyoLogoImage = _vidyoLogoImage;
+            _tokenGenerator = new TokenGenerator("1d5e6027ba264867a681984412ab2900", "101b49.vidyo.io", DisplayName, 5000);
+            _token = _tokenGenerator.GenerateToken();
+            Token = _token;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-#if __WINDOWS_WPF__
+#if WINDOWS_WPF
         const string _cameraOnImage      = @"Assets\camera_on.png";
         const string _cameraOffImage     = @"Assets\camera_off.png";
         const string _microphoneOnImage  = @"Assets\microphone_on.png";
@@ -27,30 +31,29 @@ namespace VidyoConnector
         const string _gearImage          = @"Assets\gear.png";
         static string _cameraSwitchImage  = @"Assets\camera_switch.png";
         static string _vidyoLogoImage     = @"Assets\vidyo_io.png";
-
 #else
-        const string _cameraOnImage      = "camera_on.png";
-        const string _cameraOffImage     = "camera_off.png";
-        const string _microphoneOnImage  = "microphone_on.png";
+        const string _cameraOnImage = "camera_on.png";
+        const string _cameraOffImage = "camera_off.png";
+        const string _microphoneOnImage = "microphone_on.png";
         const string _microphoneOffImage = "microphone_off.png";
-        const string _callStartImage     = "call_start.png";
-        const string _callEndImage       = "call_end.png";
-        const string _gearImage          = "gear.png";
-        static string _cameraSwitchImage  = "camera_switch.png";
-        static string _vidyoLogoImage     = "vidyo_io.png";
+        const string _callStartImage = "call_start.png";
+        const string _callEndImage = "call_end.png";
+        const string _gearImage = "gear.png";
+        static string _cameraSwitchImage = "camera_switch.png";
+        static string _vidyoLogoImage = "vidyo_io.png";
 #endif
-        string _cameraPrivacyImage       = _cameraOnImage;
-        string _microphonePrivacyImage   = _microphoneOnImage;
-        string _callImage                = _callStartImage;
-        bool   _cameraPrivacy            = false;
-        bool   _microphonePrivacy        = false;
-        string _host                     = "prod.vidyo.io";
-        string _token                    = ""; // INSERT VALID TOKEN
-        string _displayName              = "XamarinUser";
-        string _resourceId               = "DemoRoom";
-        string _toolbarStatus            = "Ready to Connect";
-        string _clientVersion            = "v 0.0.00.x";
-        VidyoCallAction _callAction      = VidyoCallAction.VidyoCallActionConnect;
+        string _cameraPrivacyImage = _cameraOnImage;
+        string _microphonePrivacyImage = _microphoneOnImage;
+        string _callImage = _callStartImage;
+        bool _cameraPrivacy = false;
+        bool _microphonePrivacy = false;
+        string _host = "prod.vidyo.io";
+        string _token;
+        string _displayName = "XamarinUser";
+        string _resourceId = "DemoRoom";
+        string _toolbarStatus = "Ready to Connect";
+        string _clientVersion = "v 0.0.00.x";
+        VidyoCallAction _callAction = VidyoCallAction.VidyoCallActionConnect;
 
         public bool ToggleCameraPrivacy()
         {
@@ -75,7 +78,8 @@ namespace VidyoConnector
 
         public VidyoCallAction CallAction
         {
-            set {
+            set
+            {
                 _callAction = value;
                 CallImage = _callAction == VidyoCallAction.VidyoCallActionConnect ? _callStartImage : _callEndImage;
             }
@@ -85,8 +89,10 @@ namespace VidyoConnector
         public string Host
         {
             get { return _host; }
-            set {
-                if (_host != value) {
+            set
+            {
+                if (_host != value)
+                {
                     _host = value;
                     OnPropertyChanged("Host");
                 }
@@ -96,8 +102,10 @@ namespace VidyoConnector
         public string Token
         {
             get { return _token; }
-            set {
-                if (_token != value) {
+            set
+            {
+                if (_token != value)
+                {
                     _token = value;
                     OnPropertyChanged("Token");
                 }
@@ -107,10 +115,14 @@ namespace VidyoConnector
         public string DisplayName
         {
             get { return _displayName; }
-            set {
-                if (_displayName != value) {
+            set
+            {
+                if (_displayName != value)
+                {
                     _displayName = value;
                     OnPropertyChanged("DisplayName");
+                    _tokenGenerator.UserName = _displayName;
+                    Token = _tokenGenerator.GenerateToken();
                 }
             }
         }
@@ -118,8 +130,10 @@ namespace VidyoConnector
         public string ResourceId
         {
             get { return _resourceId; }
-            set {
-                if (_resourceId != value) {
+            set
+            {
+                if (_resourceId != value)
+                {
                     _resourceId = value;
                     OnPropertyChanged("ResourceId");
                 }
@@ -129,8 +143,10 @@ namespace VidyoConnector
         public string ToolbarStatus
         {
             get { return _toolbarStatus; }
-            set {
-                if (_toolbarStatus != value) {
+            set
+            {
+                if (_toolbarStatus != value)
+                {
                     _toolbarStatus = value;
                     OnPropertyChanged("ToolbarStatus");
                 }
@@ -140,8 +156,10 @@ namespace VidyoConnector
         public string ClientVersion
         {
             get { return _clientVersion; }
-            set {
-                if (_clientVersion != value) {
+            set
+            {
+                if (_clientVersion != value)
+                {
                     _clientVersion = value;
                     OnPropertyChanged("ClientVersion");
                 }
@@ -151,8 +169,10 @@ namespace VidyoConnector
         public string CallImage
         {
             get { return _callImage; }
-            set {
-                if (_callImage != value) {
+            set
+            {
+                if (_callImage != value)
+                {
                     _callImage = value;
                     OnPropertyChanged("CallImage");
                 }
@@ -162,8 +182,10 @@ namespace VidyoConnector
         public string CameraPrivacyImage
         {
             get { return _cameraPrivacyImage; }
-            set {
-                if (_cameraPrivacyImage != value) {
+            set
+            {
+                if (_cameraPrivacyImage != value)
+                {
                     _cameraPrivacyImage = value;
                     OnPropertyChanged("CameraPrivacyImage");
                 }
@@ -201,8 +223,10 @@ namespace VidyoConnector
         public string MicrophonePrivacyImage
         {
             get { return _microphonePrivacyImage; }
-            set {
-                if (_microphonePrivacyImage != value) {
+            set
+            {
+                if (_microphonePrivacyImage != value)
+                {
                     _microphonePrivacyImage = value;
                     OnPropertyChanged("MicrophonePrivacyImage");
                 }
@@ -212,7 +236,8 @@ namespace VidyoConnector
         protected virtual void OnPropertyChanged(string propertyName)
         {
             var changed = PropertyChanged;
-            if (changed != null) {
+            if (changed != null)
+            {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
