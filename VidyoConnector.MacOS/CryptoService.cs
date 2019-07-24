@@ -11,3 +11,4 @@ namespace VidyoConnector.MacOS
             return hmacsha384.ComputeHash(buffer);
         }
     }
+}
