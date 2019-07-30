@@ -14,6 +14,7 @@ namespace VidyoConnector
             this.DisplayDiagnostics = false;
             CameraSwitchImage = _cameraSwitchImage;
             VidyoLogoImage = _vidyoLogoImage;
+            GearImage = _gearImage;
             _tokenGenerator = new TokenGenerator("1d5e6027ba264867a681984412ab2900", "101b49.vidyo.io", DisplayName, 5000);
             _token = _tokenGenerator.GenerateToken();
             Token = _token;
@@ -28,7 +29,7 @@ namespace VidyoConnector
         const string _microphoneOffImage = @"Assets\microphone_off.png";
         const string _callStartImage     = @"Assets\call_start.png";
         const string _callEndImage       = @"Assets\call_end.png";
-        const string _gearImage          = @"Assets\gear.png";
+        static string _gearImage          = @"Assets\gear.png";
         static string _cameraSwitchImage  = @"Assets\camera_switch.png";
         static string _vidyoLogoImage     = @"Assets\vidyo_io.png";
 #else
@@ -214,6 +215,19 @@ namespace VidyoConnector
                 {
                     _vidyoLogoImage = value;
                     OnPropertyChanged("VidyoLogoImage");
+                }
+            }
+        }
+
+        public string GearImage
+        {
+            get { return _gearImage; }
+            set
+            {
+                if (_gearImage != value)
+                {
+                    _gearImage = value;
+                    OnPropertyChanged("GearImage");
                 }
             }
         }

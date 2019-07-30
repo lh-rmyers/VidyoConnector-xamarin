@@ -89,7 +89,7 @@
             VerticalOptions="Center"
             HorizontalOptions="Center" />
         <Image 
-            Source="gear.png"
+            Source="{Binding GearImage}"
             Grid.Row="4"
             Grid.Column="5"
             HorizontalOptions="End"
