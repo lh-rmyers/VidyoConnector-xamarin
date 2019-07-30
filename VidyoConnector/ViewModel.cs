@@ -39,7 +39,7 @@ namespace VidyoConnector
         const string _microphoneOffImage = "microphone_off.png";
         const string _callStartImage = "call_start.png";
         const string _callEndImage = "call_end.png";
-        const string _gearImage = "gear.png";
+        static string _gearImage = "gear.png";
         static string _cameraSwitchImage = "camera_switch.png";
         static string _vidyoLogoImage = "vidyo_io.png";
 #endif
