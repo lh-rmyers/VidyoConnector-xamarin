@@ -27,8 +27,13 @@ namespace VidyoConnector
         {
             // Handle when your app starts
             Debug.WriteLine("OnStart");
-            ViewModel thisModel = ViewModel.GetInstance();
-            thisModel.ClientVersion = "v " + _vidyoController.OnAppStart();
+
+            //Running OnAppStart here for WPF causes it to be run twice in the NativeViewRenderer, which breaks audio.
+            if (Device.RuntimePlatform != Device.WPF)
+            {
+                ViewModel thisModel = ViewModel.GetInstance();
+                thisModel.ClientVersion = "v " + _vidyoController.OnAppStart();
+            }
         }
 
         protected override void OnSleep()

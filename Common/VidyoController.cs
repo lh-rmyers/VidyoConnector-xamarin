@@ -186,22 +186,26 @@ namespace VidyoConnector
             if (_connector != null) {
                 uint w = _videoView.NativeWidth;
                 uint h = _videoView.NativeHeight;
-#if WINDOWS_WPF
-                const int headerHeight = 100;
-                const uint footerHeight = 100;
-                //TODO: Figure out how to properly position the video preview here.
-                //For other platforms it shows up in the background, but WPF causes it to be on top of the UI.
-                if (ConnectorState == VidyoConnectorState.VidyoConnectorStateConnected)
+                if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.WPF)
                 {
-                    _connector.ShowViewAtPoints(_videoView.Handle, 0, headerHeight, w, h - footerHeight);
+                    const int headerHeight = 100;
+                    const uint footerHeight = 100;
+                    //TODO: Figure out how to properly position the video preview here.
+                    //For other platforms it shows up in the background, but WPF causes it to be on top of the UI.
+                    if (ConnectorState == VidyoConnectorState.VidyoConnectorStateConnected)
+                    {
+                        _connector.ShowViewAtPoints(_videoView.Handle, 0, headerHeight, w, h - footerHeight);
+                    }
+                    else
+                    {
+                        _connector.ShowViewAtPoints(_videoView.Handle, 0, headerHeight, 250, 250);
+                    }
                 }
                 else
                 {
-                    _connector.ShowViewAtPoints(_videoView.Handle, 0, headerHeight, 250, 250);
+                    _connector.ShowViewAt(_videoView.Handle, 0, 0, w, h);
                 }
-#else
-                _connector.ShowViewAt(_videoView.Handle, 0, 0, w, h);
-#endif
+
                 _logger.Log("VidyoConnectorShowViewAt: x = 0, y = 0, w = " + w + ", h = " + h);
             }
         }

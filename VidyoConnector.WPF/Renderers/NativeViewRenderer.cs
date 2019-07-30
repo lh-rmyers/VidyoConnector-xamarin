@@ -32,7 +32,8 @@ namespace VidyoConnector.WPF.Renderers
                 VidyoController vidyoController = VidyoController.GetInstance();
                 //this sets the _videoView's handle and calls appStart
                 vidyoController.SetNativeHandle(panelHwnd.Handle);
-                vidyoController.OnAppStart();
+                ViewModel thisModel = ViewModel.GetInstance();
+                thisModel.ClientVersion = "v " + vidyoController.OnAppStart();
             }
         }
     }
